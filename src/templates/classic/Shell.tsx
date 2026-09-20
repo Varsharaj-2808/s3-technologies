@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { AppHeader } from '../../components/layout/AppHeader';
-import { MainNav } from '../../components/layout/MainNav';
-import { MobileDrawer } from '../../components/layout/MobileDrawer';
-import { AppFooter } from '../../components/layout/AppFooter';
-import { SubFooter } from '../../components/layout/SubFooter';
+import { useRouter } from '../../context/RouterContext';
+import { ClassicHeader } from './ClassicHeader';
+import { ClassicDrawer } from './ClassicDrawer';
+import { ClassicFooter } from './ClassicFooter';
+import { ClassicHome } from './ClassicHome';
 import { TemplateShellProps } from '../types';
 
 export const ClassicShell: React.FC<TemplateShellProps> = ({
@@ -13,7 +13,10 @@ export const ClassicShell: React.FC<TemplateShellProps> = ({
   heroBanner,
 }) => {
   const { theme } = useTheme();
+  const { currentPath } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isHome = currentPath === '/';
 
   return (
     <div
@@ -24,33 +27,40 @@ export const ClassicShell: React.FC<TemplateShellProps> = ({
         color: theme.textPrimary,
       }}
     >
-      <AppHeader onToggleMobileMenu={() => setMobileMenuOpen(true)} />
-      <MainNav />
-      <MobileDrawer isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
+      <ClassicHeader onToggleMobileMenu={() => setMobileMenuOpen(true)} />
+      <ClassicDrawer isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
 
-      {/* Optional Full-width Hero Banner (.block-inner) */}
-      {heroBanner}
+      {isHome ? (
+        /* Redesigned academic homepage */
+        <main className="flex-1 max-w-6xl w-full mx-auto px-4">
+          <ClassicHome />
+        </main>
+      ) : (
+        <>
+          {/* Optional Full-width Hero Banner (.block-inner) */}
+          {heroBanner}
 
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-8">
-        {sidebar ? (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            {/* Main Content Area (Left on Desktop, col-md-8) */}
-            <div className="lg:col-span-8 min-w-0">
-              {children}
-            </div>
+          <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-8">
+            {sidebar ? (
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Main Content Area (Left on Desktop, col-md-8) */}
+                <div className="lg:col-span-8 min-w-0">
+                  {children}
+                </div>
 
-            {/* Sidebar Area (Right on Desktop, col-md-4) */}
-            <div className="lg:col-span-4 space-y-6 min-w-0">
-              {sidebar}
-            </div>
-          </div>
-        ) : (
-          <div>{children}</div>
-        )}
-      </main>
+                {/* Sidebar Area (Right on Desktop, col-md-4) */}
+                <div className="lg:col-span-4 space-y-6 min-w-0">
+                  {sidebar}
+                </div>
+              </div>
+            ) : (
+              <div>{children}</div>
+            )}
+          </main>
+        </>
+      )}
 
-      <AppFooter />
-      <SubFooter />
+      <ClassicFooter />
     </div>
   );
 };

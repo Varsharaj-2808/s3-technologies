@@ -1,9 +1,18 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { Link } from '../../context/RouterContext';
+import { useSectionNav } from './home/scrollUtils';
 
 export const ModernFooter: React.FC = () => {
   const { theme } = useTheme();
+  const goToSection = useSectionNav();
+
+  const exploreLinks: { label: string; sectionId: string }[] = [
+    { label: 'Journals', sectionId: 'journals' },
+    { label: 'Articles', sectionId: 'articles' },
+    { label: 'Books', sectionId: 'books' },
+    { label: 'Contact', sectionId: 'contact' },
+  ];
 
   return (
     <footer
@@ -42,10 +51,16 @@ export const ModernFooter: React.FC = () => {
                 Explore
               </h3>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li><Link to="/journals" className="hover:text-white transition-colors">Journals</Link></li>
-                <li><Link to="/books" className="hover:text-white transition-colors">Books</Link></li>
-                <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                <li><Link to="/join-as-editor" className="hover:text-white transition-colors">Join as Editor</Link></li>
+                {exploreLinks.map((link) => (
+                  <li key={link.sectionId}>
+                    <button
+                      onClick={() => goToSection(link.sectionId)}
+                      className="hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -57,8 +72,22 @@ export const ModernFooter: React.FC = () => {
                 For Authors
               </h3>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li><Link to="/submit-articles" className="hover:text-white transition-colors">Submit Article</Link></li>
-                <li><Link to="/book-submission" className="hover:text-white transition-colors">Book Submission</Link></li>
+                <li>
+                  <button
+                    onClick={() => goToSection('submission')}
+                    className="hover:text-white transition-colors"
+                  >
+                    Submit Article
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => goToSection('submission')}
+                    className="hover:text-white transition-colors"
+                  >
+                    Book Submission
+                  </button>
+                </li>
                 <li><Link to="/review-request" className="hover:text-white transition-colors">Review Request</Link></li>
                 <li><Link to="/reviewer-report-form" className="hover:text-white transition-colors">Reviewer Report</Link></li>
               </ul>

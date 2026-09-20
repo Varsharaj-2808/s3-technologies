@@ -1,8 +1,7 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { useRouter, Link } from '../../context/RouterContext';
-import { NAV_ITEMS } from '../../components/layout/MainNav';
 import { ThemeSwitcher } from '../../components/ui/ThemeSwitcher';
+import { MODERN_SECTIONS, useSectionNav } from './home/scrollUtils';
 import { X, Mail } from 'lucide-react';
 
 interface ModernDrawerProps {
@@ -12,7 +11,7 @@ interface ModernDrawerProps {
 
 export const ModernDrawer: React.FC<ModernDrawerProps> = ({ isOpen, onClose }) => {
   const { theme } = useTheme();
-  const { currentPath } = useRouter();
+  const goToSection = useSectionNav();
 
   if (!isOpen) return null;
 
@@ -42,21 +41,18 @@ export const ModernDrawer: React.FC<ModernDrawerProps> = ({ isOpen, onClose }) =
         </div>
 
         <div className="flex-1 py-2 divide-y divide-slate-100">
-          {NAV_ITEMS.map((item) => {
-            const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                to={item.href}
-                onClick={onClose}
-                className={`block px-5 py-3 text-sm font-semibold tracking-wide transition-colors ${
-                  active ? 'text-blue-600' : 'text-slate-700 hover:bg-slate-50'
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+          {MODERN_SECTIONS.map((item) => (
+            <button
+              key={item.sectionId}
+              onClick={() => {
+                onClose();
+                goToSection(item.sectionId);
+              }}
+              className="block w-full text-left px-5 py-3 text-sm font-semibold tracking-wide transition-colors text-slate-700 hover:bg-slate-50"
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
 
         <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500">

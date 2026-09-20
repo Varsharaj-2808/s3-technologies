@@ -57,19 +57,16 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({ children, as = 'h3',
     );
   }
 
-  // classic — preserves the original heading + rule markup exactly
+  // classic — academic serif heading + thin hairline rule
   return (
     <>
       <Tag
         className={`${textSize} font-bold text-gray-900 mb-2`}
-        style={{ fontFamily: theme.fontFamilyHeading }}
+        style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
       >
         {children}
       </Tag>
-      <div
-        className="w-12 h-0.5 mb-4"
-        style={{ backgroundColor: theme.topBannerBg }}
-      />
+      <div className="w-12 h-px mb-4" style={{ backgroundColor: '#9ca3af' }} />
     </>
   );
 };

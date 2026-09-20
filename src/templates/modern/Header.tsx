@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { useRouter, Link } from '../../context/RouterContext';
 import { ThemeSwitcher } from '../../components/ui/ThemeSwitcher';
-import { NAV_ITEMS } from '../../components/layout/MainNav';
+import { MODERN_SECTIONS, useSectionNav } from './home/scrollUtils';
 import { Menu, Mail } from 'lucide-react';
 
 interface ModernHeaderProps {
@@ -12,11 +12,36 @@ interface ModernHeaderProps {
 export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }) => {
   const { theme } = useTheme();
   const { currentPath } = useRouter();
+  const goToSection = useSectionNav();
+  const [activeSection, setActiveSection] = useState('');
 
-  const isActive = (href: string) => {
-    if (href === '/') return currentPath === '/';
-    return currentPath.startsWith(href);
-  };
+  useEffect(() => {
+    if (currentPath !== '/') {
+      setActiveSection('');
+      return;
+    }
+
+    const ids = MODERN_SECTIONS.map((s) => s.sectionId);
+    const compute = () => {
+      const probe = window.innerHeight / 3;
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= probe) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+
+    compute();
+    window.addEventListener('scroll', compute, { passive: true });
+    window.addEventListener('resize', compute);
+    return () => {
+      window.removeEventListener('scroll', compute);
+      window.removeEventListener('resize', compute);
+    };
+  }, [currentPath]);
 
   return (
     <header className="w-full transition-colors">
@@ -60,18 +85,18 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                to={item.href}
+            {MODERN_SECTIONS.map((item) => (
+              <button
+                key={item.sectionId}
+                onClick={() => goToSection(item.sectionId)}
                 className={`px-3 py-2 text-xs font-semibold uppercase tracking-wide rounded-lg transition-colors ${
-                  isActive(item.href)
+                  activeSection === item.sectionId
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
                 }`}
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </nav>
 
