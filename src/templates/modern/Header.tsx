@@ -48,14 +48,14 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
       <div className="bg-slate-900 text-slate-300 text-xs border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-4">
           <p className="hidden md:block text-slate-400">
-            Open Access Scholarly Publisher
+            
           </p>
           <a
-            href="mailto:jpub.editor@jpub.org"
+            href=""
             className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
           >
             <Mail className="w-3.5 h-3.5" />
-            jpub.editor@jpub.org
+            
           </a>
         </div>
       </div>
@@ -74,10 +74,10 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
                 className="block text-lg font-extrabold tracking-tight text-slate-900 leading-tight"
                 style={{ fontFamily: theme.fontFamilyHeading }}
               >
-                S3 Publication
+                
               </span>
               <span className="block text-[10px] uppercase tracking-widest text-slate-500">
-                Open Access Publisher
+                
               </span>
             </span>
           </Link>

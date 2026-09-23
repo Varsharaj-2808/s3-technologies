@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]"
               style={{ fontFamily: theme.fontFamilyHeading }}
             >
-              Advancing research through open access publishing
+              Advancing Research Through Open Access Publishing
             </h1>
             <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
               S3 Publication is an autonomous open access academic publisher of arts, science,

@@ -34,7 +34,7 @@ export const ModernFooter: React.FC = () => {
                   className="text-base font-extrabold tracking-tight text-white"
                   style={{ fontFamily: theme.fontFamilyHeading }}
                 >
-                  S3 Publication
+                 
                 </span>
               </div>
               <p className="text-xs leading-relaxed text-slate-400 max-w-md">
