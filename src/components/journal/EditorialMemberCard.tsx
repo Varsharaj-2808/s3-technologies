@@ -31,8 +31,11 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
       style={{ borderColor: theme.borderColor }}
     >
       <div
-        className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 text-white font-bold"
-        style={{ backgroundColor: member.role === 'editor-in-chief' ? theme.primaryColor : theme.secondaryColor }}
+        className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold"
+        style={{
+          backgroundColor: member.role === 'editor-in-chief' ? theme.primaryColor : theme.secondaryColor,
+          color: member.role === 'editor-in-chief' ? '#ffffff' : theme.onSecondary,
+        }}
       >
         <User className="w-6 h-6" />
       </div>
@@ -55,7 +58,7 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
           {member.email && (
             <a
               href={`mailto:${member.email}`}
-              className="flex items-center gap-1 text-gray-600 hover:text-purple-700 font-medium"
+              className="flex items-center gap-1 text-gray-600 hover:text-[color:var(--link-hover-legacy)] font-medium"
             >
               <Mail className="w-3.5 h-3.5 text-gray-400" />
               {member.email}
@@ -67,7 +70,7 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
               href={member.profiles.scopus}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-blue-600 hover:underline"
+              className="flex items-center gap-1 text-[color:var(--brand-text)] hover:underline"
             >
               <span>Scopus Profile</span>
               <ExternalLink className="w-2.5 h-2.5" />

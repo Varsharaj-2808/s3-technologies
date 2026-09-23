@@ -12,12 +12,12 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({ title, subtitle 
   return (
     <section
       className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
-      style={{ backgroundColor: '#EEF3F8' }}
+      style={{ backgroundColor: theme.heroBg }}
     >
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
         <h1
-          className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
-          style={{ fontFamily: theme.fontFamilyHeading }}
+          className="text-2xl sm:text-3xl font-extrabold tracking-tight"
+          style={{ fontFamily: theme.fontFamilyHeading, color: theme.heroText }}
         >
           {title}
         </h1>
@@ -26,7 +26,7 @@ export const PageHeroBanner: React.FC<PageHeroBannerProps> = ({ title, subtitle 
             {subtitle}
           </p>
         )}
-        <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full" />
+        <div className="mt-3 w-12 h-1 rounded-full" style={{ backgroundColor: theme.secondaryColor }} />
       </div>
     </section>
   );

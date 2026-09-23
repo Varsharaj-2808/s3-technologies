@@ -1,4 +1,4 @@
-export type ThemeId = 'modern';
+export type ThemeId = 'modern' | 'green' | 'plum';
 
 export interface ThemeConfig {
   id: ThemeId;
@@ -25,6 +25,25 @@ export interface ThemeConfig {
   fontFamilyBody: string;
   cardRadius: string;
   contentContainerClass: string;
+  heroBg: string;
+  heroText: string;
+  brandText: string;
+  brandHover: string;
+  brandHoverDark: string;
+  brandTintBg: string;
+  brandTintRing: string;
+  ctaShadow: string;
+  heroGradientEnd: string;
+  heroAccentText: string;
+  heroAccentIcon: string;
+  heroChipBg: string;
+  heroChipBorder: string;
+  heroIconBg: string;
+  accentDark: string;
+  focusRing: string;
+  linkHoverLegacy: string;
+  codeAccent: string;
+  onSecondary: string;
 }
 
 export interface Journal {

@@ -12,7 +12,7 @@ export const JournalCard: React.FC<JournalCardProps> = ({ journal }) => {
 
   return (
     <div
-      className="relative bg-white border border-gray-400 hover:border-purple-800 mb-3 transition-colors group"
+      className="relative bg-white border border-gray-400 hover:border-[color:var(--accent-dark)] mb-3 transition-colors group"
       style={{
         borderColor: '#999',
       }}
@@ -41,7 +41,7 @@ export const JournalCard: React.FC<JournalCardProps> = ({ journal }) => {
         </div>
         <div className="flex-1 pl-4 pr-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
           <h3
-            className="font-bold text-[13px] sm:text-sm text-gray-900 group-hover:text-purple-800 transition-colors leading-snug"
+            className="font-bold text-[13px] sm:text-sm text-gray-900 group-hover:text-[color:var(--accent-dark)] transition-colors leading-snug"
             style={{ fontFamily: theme.fontFamilyHeading }}
           >
             {journal.title}

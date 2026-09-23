@@ -65,7 +65,7 @@ export const SupportFormPage: React.FC = () => {
                 placeholder="e.g. JPUB-2026-880"
                 value={formData.manuscriptId}
                 onChange={(e) => setFormData({ ...formData, manuscriptId: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -79,7 +79,7 @@ export const SupportFormPage: React.FC = () => {
                 placeholder="Dr. / Prof. Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -93,7 +93,7 @@ export const SupportFormPage: React.FC = () => {
                 placeholder="your.email@institution.edu"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -105,7 +105,7 @@ export const SupportFormPage: React.FC = () => {
                 required
                 value={formData.journalId}
                 onChange={(e) => setFormData({ ...formData, journalId: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 {JOURNALS_DATA.map((j) => (
                   <option key={j.id} value={j.id}>
@@ -124,7 +124,7 @@ export const SupportFormPage: React.FC = () => {
               <select
                 value={formData.decision}
                 onChange={(e) => setFormData({ ...formData, decision: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="Accept Invitation to Review">Accept Invitation to Review</option>
                 <option value="Decline with Apologies">Decline with Apologies (Unavailable)</option>
@@ -142,7 +142,7 @@ export const SupportFormPage: React.FC = () => {
               placeholder="Additional comments or clarifications for the editorial office..."
               value={formData.comments}
               onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 

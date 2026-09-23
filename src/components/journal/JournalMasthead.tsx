@@ -14,18 +14,18 @@ export const JournalMasthead: React.FC<JournalMastheadProps> = ({ journal, subpa
     <section
       className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
       style={{
-        backgroundColor: theme.id === 'modern' ? '#EEF3F8' : theme.innerBannerBg,
+        backgroundColor: theme.heroBg,
       }}
     >
       <div className="max-w-6xl mx-auto px-4">
         <h1
-          className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
-          style={{ fontFamily: theme.fontFamilyHeading }}
+          className="text-2xl sm:text-3xl font-extrabold tracking-tight"
+          style={{ fontFamily: theme.fontFamilyHeading, color: theme.heroText }}
         >
           {journal.title}
         </h1>
         {subpageTitle && (
-          <div className="text-blue-600 text-sm font-bold mt-1 uppercase tracking-wider">
+          <div className="text-sm font-bold mt-1 uppercase tracking-wider" style={{ color: theme.brandText }}>
             {subpageTitle}
           </div>
         )}
@@ -33,7 +33,7 @@ export const JournalMasthead: React.FC<JournalMastheadProps> = ({ journal, subpa
           ISSN (online): {journal.issn}
         </p>
 
-        <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full mx-auto" />
+        <div className="mt-3 w-12 h-1 rounded-full mx-auto" style={{ backgroundColor: theme.secondaryColor }} />
 
         <div className="mt-5 flex items-center justify-end gap-3">
           <a

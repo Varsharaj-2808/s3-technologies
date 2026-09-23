@@ -32,7 +32,7 @@ const SectionHeading: React.FC<{
   const alignCls = align === 'center' ? 'text-center mx-auto' : 'text-left';
   return (
     <div className={`max-w-2xl ${alignCls}`}>
-      <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-2">{eyebrow}</p>
+      <p className="text-xs font-bold uppercase tracking-widest text-[color:var(--brand-text)] mb-2">{eyebrow}</p>
       <h2
         className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${light ? 'text-white' : 'text-slate-900'}`}
         style={{ fontFamily: theme.fontFamilyHeading }}
@@ -68,7 +68,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white scroll-mt-24"
+      className="relative overflow-hidden bg-gradient-to-br from-[color:var(--header-bg)] via-[color:var(--header-bg)] to-[color:var(--hero-gradient-end)] text-white scroll-mt-24"
     >
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
@@ -81,7 +81,7 @@ const HeroSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-14 items-center">
           {/* Hero text and CTA on one side (Desktop left: ~55-58%) */}
           <div className="lg:col-span-7 xl:col-span-6">
-            <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-200 bg-blue-500/10 border border-blue-400/30 rounded-full px-3 py-1.5 mb-6">
+            <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[color:var(--hero-accent-text)] bg-[color:var(--hero-chip-bg)] border border-[color:var(--hero-chip-border)] rounded-full px-3 py-1.5 mb-6">
               <Layers className="w-3.5 h-3.5" />
               Open Access &middot; Peer Reviewed
             </p>
@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]"
               style={{ fontFamily: theme.fontFamilyHeading }}
             >
-              Advancing research through open access publishing
+              Advancing Research Through Open Access Publishing
             </h1>
             <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
               S3 Publication is an autonomous open access academic publisher of arts, science,
@@ -98,7 +98,7 @@ const HeroSection: React.FC = () => {
             <div className="mt-8 sm:mt-9 flex flex-wrap items-center gap-3">
               <button
                 onClick={() => scrollToSection('journals')}
-                className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold shadow-lg shadow-blue-900/40 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-xl bg-[color:var(--button-bg)] hover:bg-[color:var(--brand-hover)] text-white px-6 py-3 text-sm font-bold shadow-[var(--cta-shadow)] transition-colors cursor-pointer"
               >
                 <BookOpen className="w-4 h-4" />
                 Explore journals
@@ -171,7 +171,7 @@ const AboutSection: React.FC = () => {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
+            <div className="bg-[color:var(--header-bg)] rounded-2xl p-6 sm:p-8 text-white shadow-xl">
               <h3 className="text-lg font-bold text-white mb-4">Our mission</h3>
               <ul className="space-y-4">
                 {mission.map((m, i) => (
@@ -191,7 +191,7 @@ const AboutSection: React.FC = () => {
 
 const JournalsSection: React.FC = () => {
   return (
-    <section id="journals" className="bg-slate-50 border-y border-slate-200 scroll-mt-24">
+    <section id="journals" className="bg-[color:var(--bg-page)] border-y border-slate-200 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <SectionHeading
           align="center"
@@ -206,7 +206,7 @@ const JournalsSection: React.FC = () => {
               to={`/journals/${j.id}`}
               className="group flex flex-col bg-white rounded-2xl ring-1 ring-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden"
             >
-              <div className="h-48 sm:h-52 w-full overflow-hidden bg-slate-900 relative">
+              <div className="h-48 sm:h-52 w-full overflow-hidden bg-[color:var(--header-bg)] relative">
                 <img
                   src={j.coverImage}
                   alt={j.title}
@@ -216,7 +216,7 @@ const JournalsSection: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="text-base font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                <h3 className="text-base font-extrabold text-slate-900 group-hover:text-[color:var(--brand-text)] transition-colors leading-snug">
                   {j.title}
                 </h3>
                 <p className="mt-2 text-[13px] text-slate-500 leading-relaxed line-clamp-3 flex-1">
@@ -226,7 +226,7 @@ const JournalsSection: React.FC = () => {
                   <Badge variant="outline">ISSN {j.issn}</Badge>
                   <Badge variant="success">Open Access</Badge>
                 </div>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-blue-600">
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[color:var(--brand-text)]">
                   View journal
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
@@ -237,7 +237,7 @@ const JournalsSection: React.FC = () => {
         <div className="mt-10 text-center">
           <Link
             to="/journals"
-            className="inline-flex items-center gap-2 rounded-xl bg-white ring-1 ring-slate-300 hover:ring-blue-500 text-slate-700 hover:text-blue-600 px-6 py-3 text-sm font-bold transition-colors"
+            className="inline-flex items-center gap-2 rounded-xl bg-white ring-1 ring-slate-300 hover:ring-[color:var(--brand-text)] text-slate-700 hover:text-[color:var(--brand-text)] px-6 py-3 text-sm font-bold transition-colors"
           >
             All journals
             <ArrowRight className="w-4 h-4" />
@@ -270,14 +270,14 @@ const ArticlesSection: React.FC = () => {
           ))}
         </div>
         <div className="mt-10 grid sm:grid-cols-2 gap-4">
-          <div className="rounded-xl bg-blue-50 ring-1 ring-blue-100 p-5 flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-blue-600 shrink-0" />
+          <div className="rounded-xl bg-[color:var(--brand-tint-bg)] ring-1 ring-[color:var(--brand-tint-ring)] p-5 flex items-center gap-3">
+            <BookOpen className="w-6 h-6 text-[color:var(--brand-text)] shrink-0" />
             <p className="text-sm text-slate-700 leading-snug">
               Browse the full archive of every journal, volume and issue.
             </p>
             <Link
               to="/journals"
-              className="ml-auto shrink-0 text-sm font-bold text-blue-600 hover:text-blue-500 inline-flex items-center gap-1"
+              className="ml-auto shrink-0 text-sm font-bold text-[color:var(--brand-text)] hover:text-[color:var(--brand-hover)] inline-flex items-center gap-1"
             >
               Journals <ArrowRight className="w-4 h-4" />
             </Link>
@@ -302,7 +302,7 @@ const ArticlesSection: React.FC = () => {
 
 const BooksSection: React.FC = () => {
   return (
-    <section id="books" className="bg-slate-50 border-y border-slate-200 scroll-mt-24">
+    <section id="books" className="bg-[color:var(--bg-page)] border-y border-slate-200 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <SectionHeading
           align="center"
@@ -328,7 +328,7 @@ const BooksSection: React.FC = () => {
                 />
               </div>
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
+                <h3 className="text-lg font-extrabold text-slate-900 group-hover:text-[color:var(--brand-text)] transition-colors leading-snug">
                   {b.title}
                 </h3>
                 <p className="mt-1 text-xs text-slate-500">
@@ -340,7 +340,7 @@ const BooksSection: React.FC = () => {
                 <p className="mt-3 text-[13px] text-slate-500 leading-relaxed line-clamp-3 flex-1">
                   {b.description}
                 </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-blue-600">
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-[color:var(--brand-text)]">
                   View publication
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
@@ -351,7 +351,7 @@ const BooksSection: React.FC = () => {
         <div className="mt-10 text-center">
           <Link
             to="/books"
-            className="inline-flex items-center gap-2 rounded-xl bg-white ring-1 ring-slate-300 hover:ring-blue-500 text-slate-700 hover:text-blue-600 px-6 py-3 text-sm font-bold transition-colors"
+            className="inline-flex items-center gap-2 rounded-xl bg-white ring-1 ring-slate-300 hover:ring-[color:var(--brand-text)] text-slate-700 hover:text-[color:var(--brand-text)] px-6 py-3 text-sm font-bold transition-colors"
           >
             All publications
             <ArrowRight className="w-4 h-4" />
@@ -377,7 +377,7 @@ const SubmissionSection: React.FC = () => {
   return (
     <section
       id="submission"
-      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white scroll-mt-24"
+      className="relative overflow-hidden bg-gradient-to-br from-[color:var(--header-bg)] via-[color:var(--header-bg)] to-[color:var(--hero-gradient-end)] text-white scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <SectionHeading
@@ -389,8 +389,8 @@ const SubmissionSection: React.FC = () => {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           <div className="bg-white/5 ring-1 ring-white/15 rounded-2xl p-6 sm:p-8 backdrop-blur-sm">
-            <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-5">
-              <FileText className="w-6 h-6 text-blue-300" />
+            <div className="w-12 h-12 rounded-xl bg-[color:var(--hero-icon-bg)] flex items-center justify-center mb-5">
+              <FileText className="w-6 h-6 text-[color:var(--hero-accent-icon)]" />
             </div>
             <h3 className="text-xl font-extrabold text-white mb-3">Submit an article</h3>
             <ul className="space-y-3 mb-6">
@@ -403,7 +403,7 @@ const SubmissionSection: React.FC = () => {
             </ul>
             <Link
               to="/submit-articles"
-              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold transition-colors"
+              className="inline-flex items-center gap-2 rounded-xl bg-[color:var(--button-bg)] hover:bg-[color:var(--brand-hover)] text-white px-6 py-3 text-sm font-bold transition-colors"
             >
               Submit manuscript <ArrowRight className="w-4 h-4" />
             </Link>
@@ -440,9 +440,9 @@ const JoinSection: React.FC = () => {
   return (
     <section id="join" className="bg-white border-y border-slate-200 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="rounded-3xl bg-blue-50 ring-1 ring-blue-100 p-6 sm:p-10 grid lg:grid-cols-2 gap-10 items-center">
+        <div className="rounded-3xl bg-[color:var(--brand-tint-bg)] ring-1 ring-[color:var(--brand-tint-ring)] p-6 sm:p-10 grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-2">Opportunities</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-[color:var(--brand-text)] mb-2">Opportunities</p>
             <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
               Join as an Editor
             </h3>
@@ -453,21 +453,21 @@ const JoinSection: React.FC = () => {
             </p>
             <ul className="mt-5 space-y-2.5">
               <li className="flex items-start gap-3">
-                <Users className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <Users className="w-5 h-5 text-[color:var(--brand-text)] shrink-0 mt-0.5" />
                 <span className="text-sm text-slate-700">Editorial direction with a worldwide author audience</span>
               </li>
               <li className="flex items-start gap-3">
-                <GraduationCap className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <GraduationCap className="w-5 h-5 text-[color:var(--brand-text)] shrink-0 mt-0.5" />
                 <span className="text-sm text-slate-700">Shape special issues and journal policy</span>
               </li>
               <li className="flex items-start gap-3">
-                <Globe className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <Globe className="w-5 h-5 text-[color:var(--brand-text)] shrink-0 mt-0.5" />
                 <span className="text-sm text-slate-700">Open access publishing with integrity and transparency</span>
               </li>
             </ul>
             <Link
               to="/join-as-editor"
-              className="mt-7 inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold transition-colors"
+              className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[color:var(--button-bg)] hover:bg-[color:var(--brand-hover)] text-white px-6 py-3 text-sm font-bold transition-colors"
             >
               Apply now <ArrowRight className="w-4 h-4" />
             </Link>
@@ -499,7 +499,7 @@ const JoinSection: React.FC = () => {
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="bg-slate-50 border-y border-slate-200 scroll-mt-24">
+    <section id="contact" className="bg-[color:var(--bg-page)] border-y border-slate-200 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         <SectionHeading
           align="center"
@@ -512,34 +512,34 @@ const ContactSection: React.FC = () => {
             <h3 className="text-lg font-bold text-slate-900 mb-4">Editorial office</h3>
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <Mail className="w-5 h-5 text-[color:var(--brand-text)] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-slate-800">Email</p>
                   <a
                     href="mailto:jpub.editor@jpub.org"
-                    className="text-slate-600 hover:text-blue-600 transition-colors"
+                    className="text-slate-600 hover:text-[color:var(--brand-text)] transition-colors"
                   >
                     jpub.editor@jpub.org
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Globe className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <Globe className="w-5 h-5 text-[color:var(--brand-text)] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-slate-800">Office</p>
                   <p className="text-slate-600">Prayagraj, Uttar Pradesh, India</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Send className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                <Send className="w-5 h-5 text-[color:var(--brand-text)] shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-slate-800">Quick channels</p>
                   <div className="flex flex-wrap gap-2 mt-1">
-                    <Link to="/review-request" className="text-blue-600 hover:text-blue-500 font-medium">
+                    <Link to="/review-request" className="text-[color:var(--brand-text)] hover:text-[color:var(--brand-hover)] font-medium">
                       Review request
                     </Link>
                     <span className="text-slate-300">|</span>
-                    <Link to="/reviewer-report-form" className="text-blue-600 hover:text-blue-500 font-medium">
+                    <Link to="/reviewer-report-form" className="text-[color:var(--brand-text)] hover:text-[color:var(--brand-hover)] font-medium">
                       Reviewer report
                     </Link>
                   </div>
@@ -556,7 +556,7 @@ const ContactSection: React.FC = () => {
             </p>
             <Link
               to="/contact"
-              className="mt-auto inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold transition-colors"
+              className="mt-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[color:var(--button-bg)] hover:bg-[color:var(--brand-hover)] text-white px-6 py-3 text-sm font-bold transition-colors"
             >
               Open contact form <ArrowRight className="w-4 h-4" />
             </Link>

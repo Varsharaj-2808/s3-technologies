@@ -148,7 +148,7 @@ export const ContactPage: React.FC = () => {
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:bg-white transition-colors"
+                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)] focus:bg-white transition-colors"
               />
               <input
                 type="tel"
@@ -157,7 +157,7 @@ export const ContactPage: React.FC = () => {
                 onChange={handleChange}
                 placeholder="Your Mobile"
                 required
-                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:bg-white transition-colors"
+                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)] focus:bg-white transition-colors"
               />
             </div>
 
@@ -170,7 +170,7 @@ export const ContactPage: React.FC = () => {
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
-                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:bg-white transition-colors"
+                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)] focus:bg-white transition-colors"
               />
               <input
                 type="text"
@@ -179,7 +179,7 @@ export const ContactPage: React.FC = () => {
                 onChange={handleChange}
                 placeholder="Your Subject"
                 required
-                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:bg-white transition-colors"
+                className="w-full h-11 px-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)] focus:bg-white transition-colors"
               />
             </div>
 
@@ -192,7 +192,7 @@ export const ContactPage: React.FC = () => {
                 placeholder="Your Message"
                 rows={6}
                 required
-                className="w-full p-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-purple-600 focus:bg-white transition-colors resize-y min-h-[140px]"
+                className="w-full p-4 text-xs sm:text-[13px] text-gray-800 bg-[#ebf3f3] border border-[#d1dcdc] rounded-xs placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)] focus:bg-white transition-colors resize-y min-h-[140px]"
               />
             </div>
 
@@ -259,7 +259,7 @@ export const ContactPage: React.FC = () => {
                     onChange={handleChange}
                     maxLength={8}
                     required
-                    className="w-48 h-8 px-3 text-xs bg-white border border-gray-300 rounded-xs focus:outline-none focus:ring-1 focus:ring-purple-600"
+                    className="w-48 h-8 px-3 text-xs bg-white border border-gray-300 rounded-xs focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)]"
                   />
 
                   <div className="text-xs text-gray-600">
@@ -267,7 +267,7 @@ export const ContactPage: React.FC = () => {
                     <button
                       type="button"
                       onClick={refreshCaptcha}
-                      className="text-blue-600 hover:text-blue-800 underline font-medium cursor-pointer"
+                      className="text-[color:var(--brand-text)] hover:text-[color:var(--brand-hover-dark)] underline font-medium cursor-pointer"
                     >
                       click here
                     </button>{' '}

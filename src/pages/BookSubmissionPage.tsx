@@ -45,16 +45,16 @@ export const BookSubmissionPage: React.FC = () => {
       heroBanner={
         <section
           className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
-          style={{ backgroundColor: '#EEF3F8' }}
+          style={{ backgroundColor: theme.heroBg }}
         >
           <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
             <h1
-              className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
-              style={{ fontFamily: theme.fontFamilyHeading }}
+              className="text-2xl sm:text-3xl font-extrabold tracking-tight"
+              style={{ fontFamily: theme.fontFamilyHeading, color: theme.heroText }}
             >
               Book Submission
             </h1>
-            <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full" />
+            <div className="mt-3 w-12 h-1 rounded-full" style={{ backgroundColor: theme.secondaryColor }} />
           </div>
         </section>
       }
@@ -75,7 +75,7 @@ export const BookSubmissionPage: React.FC = () => {
               <select
                 value={formData.proposalType}
                 onChange={(e) => setFormData({ ...formData, proposalType: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="Edited Monograph">Edited Monograph (With Call for Chapters)</option>
                 <option value="Authored Book">Authored Academic Book</option>
@@ -94,7 +94,7 @@ export const BookSubmissionPage: React.FC = () => {
                 placeholder="Full proposed book title"
                 value={formData.bookTitle}
                 onChange={(e) => setFormData({ ...formData, bookTitle: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -108,7 +108,7 @@ export const BookSubmissionPage: React.FC = () => {
                 placeholder="Prof. / Dr. Full Name"
                 value={formData.proposerName}
                 onChange={(e) => setFormData({ ...formData, proposerName: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -122,7 +122,7 @@ export const BookSubmissionPage: React.FC = () => {
                 placeholder="University / Institute"
                 value={formData.affiliation}
                 onChange={(e) => setFormData({ ...formData, affiliation: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -136,7 +136,7 @@ export const BookSubmissionPage: React.FC = () => {
                 placeholder="academic@institution.edu"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -149,7 +149,7 @@ export const BookSubmissionPage: React.FC = () => {
                 placeholder="+Country Code Mobile"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
           </div>
@@ -164,7 +164,7 @@ export const BookSubmissionPage: React.FC = () => {
               placeholder="Outline the thematic scope, target readership, and table of contents..."
               value={formData.synopsis}
               onChange={(e) => setFormData({ ...formData, synopsis: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 

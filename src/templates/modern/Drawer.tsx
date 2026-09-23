@@ -2,6 +2,7 @@ import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { MODERN_SECTIONS, useSectionNav } from './home/scrollUtils';
 import { X, Mail } from 'lucide-react';
+import { ThemeSwitcher } from '../../components/ui/ThemeSwitcher';
 
 interface ModernDrawerProps {
   isOpen: boolean;
@@ -49,10 +50,20 @@ export const ModernDrawer: React.FC<ModernDrawerProps> = ({ isOpen, onClose }) =
           ))}
         </div>
 
+        <div className="px-5 py-4">
+          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
+            Visual Theme
+          </p>
+          <ThemeSwitcher compact />
+        </div>
+
         <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500">
           <p className="font-semibold text-slate-700 mb-1">Editorial Office:</p>
           <p>Prayagraj, Uttar Pradesh, India</p>
-          <a href="mailto:jpub.editor@jpub.org" className="flex items-center gap-1 mt-2 text-blue-600 font-medium">
+          <a
+            href="mailto:jpub.editor@jpub.org"
+            className="flex items-center gap-1 mt-2 text-[color:var(--brand-text)] font-medium"
+          >
             <Mail className="w-3.5 h-3.5" />
             jpub.editor@jpub.org
           </a>

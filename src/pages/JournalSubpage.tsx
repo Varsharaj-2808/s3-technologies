@@ -158,11 +158,11 @@ export const JournalSubpage: React.FC = () => {
                   <Link
                     key={v.volume}
                     to={`/journals/${journal.id}/volume/${v.volume}`}
-                    className="p-4 border border-gray-300 hover:border-purple-800 transition-all flex items-start gap-3 group bg-white"
+                    className="p-4 border border-gray-300 hover:border-[color:var(--accent-dark)] transition-all flex items-start gap-3 group bg-white"
                   >
-                    <Folder className="w-6 h-6 text-purple-800 shrink-0 mt-0.5" />
+                    <Folder className="w-6 h-6 text-[color:var(--accent-dark)] shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="text-sm font-bold text-gray-900 group-hover:text-purple-800">
+                      <h4 className="text-sm font-bold text-gray-900 group-hover:text-[color:var(--accent-dark)]">
                         Volume {v.volume} ({v.year})
                       </h4>
                       <p className="text-xs text-gray-500 mt-1">{v.issues.length} Issues Published</p>

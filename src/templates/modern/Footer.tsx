@@ -16,7 +16,7 @@ export const ModernFooter: React.FC = () => {
 
   return (
     <footer
-      className="bg-slate-900 text-slate-300 transition-colors mt-auto"
+      className="bg-[color:var(--header-bg)] text-slate-300 transition-colors mt-auto"
       style={{ fontFamily: theme.fontFamilyBody }}
     >
       {/* Brand band */}
@@ -34,7 +34,7 @@ export const ModernFooter: React.FC = () => {
                   className="text-base font-extrabold tracking-tight text-white"
                   style={{ fontFamily: theme.fontFamilyHeading }}
                 >
-                  S3 Publication
+                  
                 </span>
               </div>
               <p className="text-xs leading-relaxed text-slate-400 max-w-md">

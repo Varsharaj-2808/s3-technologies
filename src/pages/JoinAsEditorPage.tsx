@@ -53,16 +53,16 @@ export const JoinAsEditorPage: React.FC = () => {
       heroBanner={
         <section
           className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
-          style={{ backgroundColor: '#EEF3F8' }}
+          style={{ backgroundColor: theme.heroBg }}
         >
           <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
             <h1
-              className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
-              style={{ fontFamily: theme.fontFamilyHeading }}
+              className="text-2xl sm:text-3xl font-extrabold tracking-tight"
+              style={{ fontFamily: theme.fontFamilyHeading, color: theme.heroText }}
             >
               Join As Editor
             </h1>
-            <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full" />
+            <div className="mt-3 w-12 h-1 rounded-full" style={{ backgroundColor: theme.secondaryColor }} />
           </div>
         </section>
       }
@@ -84,7 +84,7 @@ export const JoinAsEditorPage: React.FC = () => {
               <select
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="Prof">Prof</option>
                 <option value="Dr">Dr</option>
@@ -104,7 +104,7 @@ export const JoinAsEditorPage: React.FC = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
           </div>
@@ -121,7 +121,7 @@ export const JoinAsEditorPage: React.FC = () => {
                 placeholder="Email ID"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -135,7 +135,7 @@ export const JoinAsEditorPage: React.FC = () => {
                 placeholder="Contact No"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
           </div>
@@ -150,7 +150,7 @@ export const JoinAsEditorPage: React.FC = () => {
                 required
                 value={formData.country}
                 onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="">Select Country</option>
                 {countries.map((c) => (
@@ -170,7 +170,7 @@ export const JoinAsEditorPage: React.FC = () => {
                 required
                 value={formData.journalId}
                 onChange={(e) => setFormData({ ...formData, journalId: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="">Select Journal</option>
                 {JOURNALS_DATA.map((j) => (
@@ -193,7 +193,7 @@ export const JoinAsEditorPage: React.FC = () => {
               placeholder="Current Affiliation (University, Institute or Hospital)"
               value={formData.affiliation}
               onChange={(e) => setFormData({ ...formData, affiliation: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 
@@ -208,7 +208,7 @@ export const JoinAsEditorPage: React.FC = () => {
               placeholder="Field of Specialization"
               value={formData.specialization}
               onChange={(e) => setFormData({ ...formData, specialization: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 

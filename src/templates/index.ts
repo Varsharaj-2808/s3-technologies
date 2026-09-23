@@ -4,6 +4,8 @@ import { modernTemplate } from './modern';
 
 export const TEMPLATES: Record<ThemeId, Template> = {
   modern: modernTemplate,
+  green: modernTemplate,
+  plum: modernTemplate,
 };
 
 export const useTemplate = (): Template => {

@@ -57,16 +57,16 @@ export const SubmitArticlesPage: React.FC = () => {
       heroBanner={
         <section
           className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
-          style={{ backgroundColor: '#EEF3F8' }}
+          style={{ backgroundColor: theme.heroBg }}
         >
           <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
             <h1
-              className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
-              style={{ fontFamily: theme.fontFamilyHeading }}
+              className="text-2xl sm:text-3xl font-extrabold tracking-tight"
+              style={{ fontFamily: theme.fontFamilyHeading, color: theme.heroText }}
             >
               Submit Articles
             </h1>
-            <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full" />
+            <div className="mt-3 w-12 h-1 rounded-full" style={{ backgroundColor: theme.secondaryColor }} />
           </div>
         </section>
       }
@@ -90,7 +90,7 @@ export const SubmitArticlesPage: React.FC = () => {
               placeholder="Corresponding Author"
               value={formData.authorName}
               onChange={(e) => setFormData({ ...formData, authorName: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 
@@ -105,7 +105,7 @@ export const SubmitArticlesPage: React.FC = () => {
               placeholder="Corresponding author Email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 
@@ -118,7 +118,7 @@ export const SubmitArticlesPage: React.FC = () => {
               required
               value={formData.country}
               onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             >
               <option value="">Select Country</option>
               {countries.map((c) => (
@@ -138,7 +138,7 @@ export const SubmitArticlesPage: React.FC = () => {
               required
               value={formData.journalId}
               onChange={(e) => setFormData({ ...formData, journalId: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             >
               <option value="">Select Journal</option>
               {JOURNALS_DATA.map((j) => (
@@ -160,7 +160,7 @@ export const SubmitArticlesPage: React.FC = () => {
               placeholder="Manuscript Title"
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 
@@ -199,7 +199,7 @@ export const SubmitArticlesPage: React.FC = () => {
                   href="https://creativecommons.org/licenses/by/4.0/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-blue-600 underline"
+                  className="text-[color:var(--brand-text)] underline"
                 >
                   Copyright Agreement
                 </a>
@@ -249,7 +249,7 @@ export const SubmitArticlesPage: React.FC = () => {
             </div>
             <div>
               <p className="font-semibold text-gray-900">Submission Tracking ID:</p>
-              <p className="font-mono text-base font-bold text-purple-900 mt-1">{submittedId}</p>
+              <p className="font-mono text-base font-bold text-[color:var(--code-accent)] mt-1">{submittedId}</p>
             </div>
             <p className="text-gray-600">
               A confirmation email has been dispatched to <strong>{formData.email}</strong>. Use your Tracking ID

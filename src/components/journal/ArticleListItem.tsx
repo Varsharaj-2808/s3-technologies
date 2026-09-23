@@ -22,7 +22,7 @@ export const ArticleListItem: React.FC<ArticleListItemProps> = ({ article }) => 
       >
         <Link
           to={`/articles/${article.id}`}
-          className="text-gray-900 hover:text-purple-800 transition-colors"
+          className="text-gray-900 hover:text-[color:var(--accent-dark)] transition-colors"
         >
           {article.title}
         </Link>

@@ -38,7 +38,7 @@ export const CaptchaField: React.FC<CaptchaFieldProps> = ({ value, onChange, req
           onChange={(e) => onChange(e.target.value)}
           placeholder="Enter code"
           required={required}
-          className="w-32 px-3 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-purple-600 bg-white"
+          className="w-32 px-3 py-1.5 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-[color:var(--focus-ring)] bg-white"
         />
       </div>
     </div>

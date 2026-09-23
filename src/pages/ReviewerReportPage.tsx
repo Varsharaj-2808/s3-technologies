@@ -60,7 +60,7 @@ export const ReviewerReportPage: React.FC = () => {
               <select
                 value={formData.title}
                 onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="Prof">Prof</option>
                 <option value="Dr">Dr</option>
@@ -80,7 +80,7 @@ export const ReviewerReportPage: React.FC = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
           </div>
@@ -97,7 +97,7 @@ export const ReviewerReportPage: React.FC = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -110,7 +110,7 @@ export const ReviewerReportPage: React.FC = () => {
                 required
                 value={formData.journalId}
                 onChange={(e) => setFormData({ ...formData, journalId: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="">Select Journal</option>
                 {JOURNALS_DATA.map((j) => (
@@ -134,7 +134,7 @@ export const ReviewerReportPage: React.FC = () => {
                 placeholder="e.g. JAHSM-2026-902"
                 value={formData.manuscriptId}
                 onChange={(e) => setFormData({ ...formData, manuscriptId: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               />
             </div>
 
@@ -146,7 +146,7 @@ export const ReviewerReportPage: React.FC = () => {
               <select
                 value={formData.recommendation}
                 onChange={(e) => setFormData({ ...formData, recommendation: e.target.value })}
-                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+                className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
               >
                 <option value="Accept without Revision">Accept without Revision</option>
                 <option value="Minor Revision">Minor Revision</option>
@@ -167,7 +167,7 @@ export const ReviewerReportPage: React.FC = () => {
               placeholder="Provide constructive feedback, queries, and critical comments for the authors and editor..."
               value={formData.report}
               onChange={(e) => setFormData({ ...formData, report: e.target.value })}
-              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-purple-800 transition-colors"
+              className="w-full p-2.5 bg-[#ebf3f3] border border-[#ddd] text-xs text-gray-800 focus:bg-white focus:outline-none focus:border-[color:var(--accent-dark)] transition-colors"
             />
           </div>
 

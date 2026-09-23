@@ -15,9 +15,9 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', cla
       case 'primary':
         return { backgroundColor: theme.primaryColor, color: '#ffffff' };
       case 'secondary':
-        return { backgroundColor: theme.secondaryColor, color: '#ffffff' };
+        return { backgroundColor: theme.secondaryColor, color: theme.onSecondary };
       case 'accent':
-        return { backgroundColor: theme.accentColor, color: '#ffffff' };
+        return { backgroundColor: theme.accentColor, color: theme.onSecondary };
       case 'outline':
         return { border: `1px solid ${theme.borderColor}`, color: theme.textSecondary };
       case 'success':

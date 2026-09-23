@@ -3,6 +3,7 @@ import { useTheme } from '../../context/ThemeContext';
 import { useRouter, Link } from '../../context/RouterContext';
 import { MODERN_SECTIONS, useSectionNav } from './home/scrollUtils';
 import { Menu, Mail } from 'lucide-react';
+import { ThemeSwitcher } from '../../components/ui/ThemeSwitcher';
 
 interface ModernHeaderProps {
   onToggleMobileMenu: () => void;
@@ -45,20 +46,23 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
   return (
     <header className="w-full transition-colors">
       {/* Slim utility strip */}
-      <div className="bg-slate-900 text-slate-300 text-xs border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-4">
-          <p className="hidden md:block text-slate-400">
-            Open Access Scholarly Publisher
-          </p>
-          <a
-            href="mailto:jpub.editor@jpub.org"
-            className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
-          >
-            <Mail className="w-3.5 h-3.5" />
-            jpub.editor@jpub.org
-          </a>
+<div className="bg-[color:var(--top-banner-bg)] text-slate-300 text-xs border-b border-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-end gap-4 sm:justify-between">
+            <p className="hidden md:block text-slate-400">
+              
+            </p>
+            <div className="flex items-center gap-3">
+              <a
+                href=""
+                className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                
+              </a>
+              <ThemeSwitcher />
+            </div>
+          </div>
         </div>
-      </div>
 
       {/* Sticky integrated header + navigation */}
       <div className="sticky top-0 z-30 bg-white/90 backdrop-blur-sm border-b border-slate-200">
@@ -74,10 +78,10 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
                 className="block text-lg font-extrabold tracking-tight text-slate-900 leading-tight"
                 style={{ fontFamily: theme.fontFamilyHeading }}
               >
-                S3 Publication
+                
               </span>
               <span className="block text-[10px] uppercase tracking-widest text-slate-500">
-                Open Access Publisher
+                
               </span>
             </span>
           </Link>
@@ -89,8 +93,8 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
                 onClick={() => goToSection(item.sectionId)}
                 className={`px-3 py-2 text-xs font-semibold uppercase tracking-wide rounded-lg transition-colors ${
                   activeSection === item.sectionId
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
+                    ? 'text-[color:var(--brand-text)] bg-[color:var(--brand-tint-bg)]'
+                    : 'text-slate-600 hover:text-[color:var(--brand-text)] hover:bg-slate-50'
                 }`}
               >
                 {item.label}
