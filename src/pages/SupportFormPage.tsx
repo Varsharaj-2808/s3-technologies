@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useRouter } from '../context/RouterContext';
 import { useTheme } from '../context/ThemeContext';
 import { Layout } from '../components/layout/Layout';
+import { PageHeroBanner } from '../components/layout/PageHeroBanner';
 import { ContentCard } from '../templates/shared/ContentCard';
 import { JOURNALS_DATA } from '../data/journalsData';
 import { CaptchaField } from '../components/ui/CaptchaField';
@@ -43,21 +44,7 @@ export const SupportFormPage: React.FC = () => {
 
   return (
     <Layout
-      heroBanner={
-        <section
-          className="py-10 text-center mb-2 transition-colors"
-          style={{ backgroundColor: theme.innerBannerBg }}
-        >
-          <div className="max-w-6xl mx-auto px-4">
-            <h1
-              className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide"
-              style={{ fontFamily: theme.fontFamilyHeading }}
-            >
-              {pageTitle}
-            </h1>
-          </div>
-        </section>
-      }
+      heroBanner={<PageHeroBanner title={pageTitle} />}
     >
       <ContentCard as="div">
         {errorMsg && (

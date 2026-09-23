@@ -5,7 +5,7 @@ export const SubFooter: React.FC = () => {
     <div className="bg-[#101010] text-[#8c8c8c] text-xs py-5 px-4 text-center border-t border-white/5">
       <div className="max-w-6xl mx-auto">
         <p className="leading-relaxed">
-          Copyright 2026 S3 Technologies, India. This work is licensed under a{' '}
+          Copyright 2026 S3 Publication, India. This work is licensed under a{' '}
           <a
             href="https://creativecommons.org/licenses/by/4.0/"
             target="_blank"

@@ -3,7 +3,6 @@ import { useTheme } from '../../context/ThemeContext';
 import { useRouter, Link } from '../../context/RouterContext';
 import { NAV_ITEMS } from './MainNav';
 import { X, BookOpen, Mail } from 'lucide-react';
-import { ThemeSwitcher } from '../ui/ThemeSwitcher';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -42,12 +41,6 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
           <button onClick={onClose} className="p-1 hover:bg-white/20 rounded">
             <X className="w-5 h-5" />
           </button>
-        </div>
-
-        {/* Theme select on mobile */}
-        <div className="p-3 bg-gray-50 border-b border-gray-200">
-          <div className="text-xs font-semibold text-gray-500 mb-1.5">Visual Theme:</div>
-          <ThemeSwitcher compact={false} />
         </div>
 
         {/* Navigation list */}

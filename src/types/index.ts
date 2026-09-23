@@ -1,4 +1,4 @@
-export type ThemeId = 'classic' | 'modern' | 'heritage';
+export type ThemeId = 'modern';
 
 export interface ThemeConfig {
   id: ThemeId;

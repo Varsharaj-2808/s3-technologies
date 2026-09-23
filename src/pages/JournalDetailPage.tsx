@@ -42,6 +42,7 @@ export const JournalDetailPage: React.FC = () => {
             <img
               src={journal.coverImage}
               alt={journal.title}
+              referrerPolicy="no-referrer"
               className="w-full h-auto object-contain"
               onError={(e) => {
                 e.currentTarget.src = '/images/jpubv5.png';

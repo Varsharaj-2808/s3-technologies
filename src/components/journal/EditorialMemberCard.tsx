@@ -23,7 +23,7 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
     }
   };
 
-  const radiusClass = themeId === 'modern' ? 'rounded-xl' : themeId === 'classic' ? 'rounded-md' : 'rounded-none';
+  const radiusClass = 'rounded-xl';
 
   return (
     <div

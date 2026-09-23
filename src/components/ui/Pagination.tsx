@@ -40,7 +40,7 @@ export const Pagination: React.FC<PaginationProps> = ({
     return pages;
   };
 
-  const btnRadius = themeId === 'modern' ? 'rounded-lg' : themeId === 'classic' ? 'rounded' : 'rounded-none';
+  const btnRadius = 'rounded-lg';
 
   return (
     <div className="flex items-center justify-center gap-1.5 my-6 select-none flex-wrap text-sm">

@@ -31,6 +31,7 @@ export const JournalCard: React.FC<JournalCardProps> = ({ journal }) => {
           <img
             src={journal.coverImage}
             alt={journal.title}
+            referrerPolicy="no-referrer"
             className="max-h-[60px] max-w-[55px] object-contain"
             onError={(e) => {
               // fallback if needed

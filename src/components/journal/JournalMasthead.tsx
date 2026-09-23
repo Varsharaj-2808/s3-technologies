@@ -12,28 +12,30 @@ export const JournalMasthead: React.FC<JournalMastheadProps> = ({ journal, subpa
 
   return (
     <section
-      className="py-10 text-center mb-2 transition-colors"
+      className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
       style={{
-        backgroundColor: theme.innerBannerBg,
+        backgroundColor: theme.id === 'modern' ? '#EEF3F8' : theme.innerBannerBg,
       }}
     >
       <div className="max-w-6xl mx-auto px-4">
         <h1
-          className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide"
+          className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
           style={{ fontFamily: theme.fontFamilyHeading }}
         >
           {journal.title}
         </h1>
         {subpageTitle && (
-          <div className="text-white/90 text-sm font-semibold mt-1 uppercase tracking-wider">
+          <div className="text-blue-600 text-sm font-bold mt-1 uppercase tracking-wider">
             {subpageTitle}
           </div>
         )}
-        <p className="text-xs sm:text-sm text-white/95 font-medium mt-1">
+        <p className="text-xs sm:text-sm text-slate-600 font-semibold mt-1">
           ISSN (online): {journal.issn}
         </p>
 
-        <div className="mt-4 flex items-center justify-end gap-3">
+        <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full mx-auto" />
+
+        <div className="mt-5 flex items-center justify-end gap-3">
           <a
             href={journal.editorialHouseRegister || `https://editorialhouse.org/${journal.slug}/user/register`}
             target="_blank"

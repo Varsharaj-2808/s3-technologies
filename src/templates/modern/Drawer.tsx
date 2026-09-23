@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { ThemeSwitcher } from '../../components/ui/ThemeSwitcher';
 import { MODERN_SECTIONS, useSectionNav } from './home/scrollUtils';
 import { X, Mail } from 'lucide-react';
 
@@ -25,19 +24,14 @@ export const ModernDrawer: React.FC<ModernDrawerProps> = ({ isOpen, onClose }) =
       >
         <div className="p-4 flex items-center justify-between border-b border-slate-200">
           <div className="flex items-center gap-2">
-            <img src="/images/jpubv5.png" alt="S3 Technologies Logo" className="h-8 w-auto object-contain" />
+            <img src="/images/jpubv5.png" alt="S3 Publication Logo" className="h-8 w-auto object-contain" />
             <span className="font-extrabold tracking-tight text-base text-slate-900" style={{ fontFamily: theme.fontFamilyHeading }}>
-              S3 Technologies
+              S3 Publication
             </span>
           </div>
           <button onClick={onClose} className="p-1.5 hover:bg-slate-100 rounded-lg text-slate-500">
             <X className="w-5 h-5" />
           </button>
-        </div>
-
-        <div className="p-3 border-b border-slate-200">
-          <div className="text-xs font-semibold text-slate-500 mb-1.5">Visual Theme:</div>
-          <ThemeSwitcher compact={false} />
         </div>
 
         <div className="flex-1 py-2 divide-y divide-slate-100">

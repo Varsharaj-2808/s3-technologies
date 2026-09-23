@@ -56,16 +56,17 @@ export const SubmitArticlesPage: React.FC = () => {
       sidebar={<TrackSubmissionCard />}
       heroBanner={
         <section
-          className="py-10 text-center mb-2 transition-colors"
-          style={{ backgroundColor: theme.innerBannerBg }}
+          className="py-10 text-center mb-2 transition-colors border-b border-slate-200/70"
+          style={{ backgroundColor: '#EEF3F8' }}
         >
-          <div className="max-w-6xl mx-auto px-4">
+          <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
             <h1
-              className="text-2xl sm:text-3xl font-extrabold text-white tracking-wide"
+              className="text-2xl sm:text-3xl font-extrabold text-[#17233A] tracking-tight"
               style={{ fontFamily: theme.fontFamilyHeading }}
             >
               Submit Articles
             </h1>
+            <div className="mt-3 w-12 h-1 bg-blue-600 rounded-full" />
           </div>
         </section>
       }
@@ -244,7 +245,7 @@ export const SubmitArticlesPage: React.FC = () => {
           <div className="space-y-4 text-xs text-gray-700">
             <div className="p-3 bg-green-50 border border-green-200 text-green-800 rounded">
               <p className="font-bold text-sm mb-1">Thank you for your submission!</p>
-              <p>Your manuscript has been registered in the S3 Technologies editorial system.</p>
+              <p>Your manuscript has been registered in the S3 Publication editorial system.</p>
             </div>
             <div>
               <p className="font-semibold text-gray-900">Submission Tracking ID:</p>

@@ -55,7 +55,7 @@ export const BookDetailPage: React.FC = () => {
             <p><strong>ISBN:</strong> {book.isbn}</p>
             <p><strong>Likely Publication Date:</strong> {book.publicationDate}</p>
             <p><strong>DOI:</strong> {book.doi}</p>
-            <p><strong>Publisher:</strong> S3 Technologies</p>
+            <p><strong>Publisher:</strong> S3 Publication</p>
 
             <div className="pt-4">
               <Link

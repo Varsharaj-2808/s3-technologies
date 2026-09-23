@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { useRouter, Link } from '../../context/RouterContext';
-import { ThemeSwitcher } from '../../components/ui/ThemeSwitcher';
 import { MODERN_SECTIONS, useSectionNav } from './home/scrollUtils';
 import { Menu, Mail } from 'lucide-react';
 
@@ -58,7 +57,6 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
             <Mail className="w-3.5 h-3.5" />
             jpub.editor@jpub.org
           </a>
-          <ThemeSwitcher />
         </div>
       </div>
 
@@ -68,7 +66,7 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src="/images/jpubv5.png"
-              alt="S3 Technologies Logo"
+              alt="S3 Publication Logo"
               className="h-11 w-auto object-contain"
             />
             <span className="hidden sm:block">
@@ -76,7 +74,7 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
                 className="block text-lg font-extrabold tracking-tight text-slate-900 leading-tight"
                 style={{ fontFamily: theme.fontFamilyHeading }}
               >
-                S3 Technologies
+                S3 Publication
               </span>
               <span className="block text-[10px] uppercase tracking-widest text-slate-500">
                 Open Access Publisher

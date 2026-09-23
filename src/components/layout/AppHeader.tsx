@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { Link } from '../../context/RouterContext';
-import { ThemeSwitcher } from '../ui/ThemeSwitcher';
 import { BookOpen, Menu, Sparkles, Mail } from 'lucide-react';
 
 interface AppHeaderProps {
@@ -26,9 +25,6 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onToggleMobileMenu }) => {
               </a>
             </span>
           </div>
-          <div className="flex items-center gap-3">
-            <ThemeSwitcher />
-          </div>
         </div>
       </div>
 
@@ -42,7 +38,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onToggleMobileMenu }) => {
             <Link to="/" className="shrink-0 group">
               <img
                 src="/images/jpubv5.png"
-                alt="S3 Technologies Logo"
+                alt="S3 Publication Logo"
                 className="h-14 sm:h-20 w-auto object-contain drop-shadow-xs"
               />
             </Link>
@@ -52,7 +48,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onToggleMobileMenu }) => {
                   className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight"
                   style={{ fontFamily: theme.fontFamilyHeading }}
                 >
-                  S3 Technologies
+                  S3 Publication
                 </h1>
               </Link>
               <h6 className="text-[11px] sm:text-sm text-white/95 font-medium mt-0.5 tracking-wide">

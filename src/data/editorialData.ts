@@ -84,7 +84,7 @@ export const EDITORIAL_MEMBERS: EditorialMember[] = [
     role: 'editor-in-chief',
     title: 'Dr.',
     name: 'M. Kalyanasundaram',
-    affiliation: 'Directorate of Computational Sciences, S3 Technologies Research Unit, Prayagraj, UP, India',
+    affiliation: 'Directorate of Computational Sciences, S3 Publication Research Unit, Prayagraj, UP, India',
     email: 'dr.kmadhu@jpub.org',
     profiles: {
       orcid: 'https://orcid.org/0000-0003-4920-1123',

@@ -52,7 +52,7 @@ export const ArticleDetailPage: React.FC = () => {
               </span>
             </li>
             <li>
-              {journal?.title || 'S3 Technologies'}, Volume: {article.volume}, Issue: {article.issue}, Pages: {article.pages}
+              {journal?.title || 'S3 Publication'}, Volume: {article.volume}, Issue: {article.issue}, Pages: {article.pages}
             </li>
             <li>
               <a

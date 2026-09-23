@@ -28,12 +28,10 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
 
   if (!isOpen) return null;
 
-  const radiusClass = themeId === 'modern' ? 'rounded-2xl' : themeId === 'classic' ? 'rounded-md' : 'rounded-none';
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
       <div
-        className={`bg-white w-full max-w-lg shadow-2xl border overflow-hidden animate-in fade-in zoom-in-95 duration-150 ${radiusClass}`}
+        className="bg-white w-full max-w-lg shadow-2xl border overflow-hidden animate-in fade-in zoom-in-95 duration-150 rounded-2xl"
         style={{ borderColor: theme.borderColor }}
       >
         <div

@@ -1,5 +1,5 @@
 {
-  "name": "S3 Technologies",
+  "name": "S3 Publication",
   "description": "Autonomous open access academic publisher of peer-reviewed arts, science, engineering, and healthcare journals, proceedings, and books.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

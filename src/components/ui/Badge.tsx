@@ -8,19 +8,13 @@ interface BadgeProps {
 }
 
 export const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', className = '' }) => {
-  const { theme, themeId } = useTheme();
+  const { theme } = useTheme();
 
   const getStyle = () => {
     switch (variant) {
       case 'primary':
-        if (themeId === 'heritage') {
-          return { border: `1px solid ${theme.primaryColor}`, color: theme.primaryColor, background: 'transparent' };
-        }
         return { backgroundColor: theme.primaryColor, color: '#ffffff' };
       case 'secondary':
-        if (themeId === 'heritage') {
-          return { border: `1px solid ${theme.secondaryColor}`, color: theme.secondaryColor, background: 'transparent' };
-        }
         return { backgroundColor: theme.secondaryColor, color: '#ffffff' };
       case 'accent':
         return { backgroundColor: theme.accentColor, color: '#ffffff' };
@@ -34,11 +28,9 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'primary', cla
     }
   };
 
-  const radiusClass = themeId === 'modern' ? 'rounded-full' : themeId === 'classic' ? 'rounded' : 'rounded-none';
-
   return (
     <span
-      className={`inline-flex items-center px-2 py-0.5 text-xs font-semibold whitespace-nowrap tracking-wide ${radiusClass} ${className}`}
+      className={`inline-flex items-center px-2 py-0.5 text-xs font-semibold whitespace-nowrap tracking-wide rounded-full ${className}`}
       style={getStyle()}
     >
       {children}

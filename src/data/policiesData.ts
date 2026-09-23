@@ -7,7 +7,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Publication Focus and Mission',
-        content: 'S3 Technologies journals are dedicated to publishing high-quality, peer-reviewed, open-access original research articles, comprehensive review articles, short communications, and clinical case reports. Our mission is to promote the scientific research community by providing an inclusive forum for interdisciplinary breakthroughs.',
+        content: 'S3 Publication journals are dedicated to publishing high-quality, peer-reviewed, open-access original research articles, comprehensive review articles, short communications, and clinical case reports. Our mission is to promote the scientific research community by providing an inclusive forum for interdisciplinary breakthroughs.',
       },
       {
         heading: 'Subject Coverage and Interdisciplinary Frontiers',
@@ -25,7 +25,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Free Format Submission',
-        content: 'Manuscript length is not restricted by S3 Technologies journals as long as the scientific presentation remains concise and coherent. Authors are encouraged to submit their initial drafts in free format (single Word or PDF file including text, figures, and tables) for swift initial editorial triage.',
+        content: 'Manuscript length is not restricted by S3 Publication journals as long as the scientific presentation remains concise and coherent. Authors are encouraged to submit their initial drafts in free format (single Word or PDF file including text, figures, and tables) for swift initial editorial triage.',
       },
       {
         heading: 'Manuscript Structure',
@@ -43,7 +43,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
   },
   'reviewer-guidelines': {
     title: 'Reviewer Guidelines',
-    summary: 'Criteria and expectations for reviewers evaluating manuscripts submitted to S3 Technologies journals.',
+    summary: 'Criteria and expectations for reviewers evaluating manuscripts submitted to S3 Publication journals.',
     sections: [
       {
         heading: 'Single-Anonymous Peer Review Process',
@@ -75,7 +75,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Editorial Responsibility and Independence',
-        content: 'Editors play a central role in maintaining the quality, integrity, and credibility of S3 Technologies journals. Editors possess complete authority and independence regarding editorial decisions based solely on scientific merit, originality, and adherence to journal scope.',
+        content: 'Editors play a central role in maintaining the quality, integrity, and credibility of S3 Publication journals. Editors possess complete authority and independence regarding editorial decisions based solely on scientific merit, originality, and adherence to journal scope.',
       },
       {
         heading: 'Managing Conflicts of Interest',
@@ -93,7 +93,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Research and Publication Ethics',
-        content: 'The publication of an article in a peer-reviewed journal is a fundamental building block in the development of a coherent and respected network of knowledge. S3 Technologies adheres strictly to the core practices defined by the Committee on Publication Ethics (COPE).',
+        content: 'The publication of an article in a peer-reviewed journal is a fundamental building block in the development of a coherent and respected network of knowledge. S3 Publication adheres strictly to the core practices defined by the Committee on Publication Ethics (COPE).',
       },
       {
         heading: 'Authorship and Contributorship',
@@ -111,11 +111,11 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Creative Commons Attribution 4.0 International (CC BY 4.0)',
-        content: 'All articles published by S3 Technologies are made immediately available worldwide under an open access license. This means anyone is free to copy, distribute, display, and perform the work, and to make derivative works, provided proper credit is given to the original authors.',
+        content: 'All articles published by S3 Publication are made immediately available worldwide under an open access license. This means anyone is free to copy, distribute, display, and perform the work, and to make derivative works, provided proper credit is given to the original authors.',
       },
       {
         heading: 'Author Copyright Retention',
-        content: 'Authors retain copyright of their published work without restrictions, granting S3 Technologies the right of first publication under the CC BY 4.0 license.',
+        content: 'Authors retain copyright of their published work without restrictions, granting S3 Publication the right of first publication under the CC BY 4.0 license.',
       },
       {
         heading: 'Self-Archiving and Institutional Repositories',
@@ -137,7 +137,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
       },
       {
         heading: 'Waiver Policy',
-        content: 'S3 Technologies provides partial and full APC waivers to authors from low-income economies as designated by the World Bank, ensuring financial constraints never prevent the publication of worthy scientific research.',
+        content: 'S3 Publication provides partial and full APC waivers to authors from low-income economies as designated by the World Bank, ensuring financial constraints never prevent the publication of worthy scientific research.',
       },
     ],
   },
@@ -147,7 +147,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Major Indexing Partners',
-        content: 'S3 Technologies journals are indexed and abstracted across distinguished international indexing databases including Crossref, Embase (Elsevier), Google Scholar, OpenAlex, OpenAIRE, and ROAD (Directory of Open Access Scholarly Resources).',
+        content: 'S3 Publication journals are indexed and abstracted across distinguished international indexing databases including Crossref, Embase (Elsevier), Google Scholar, OpenAlex, OpenAIRE, and ROAD (Directory of Open Access Scholarly Resources).',
         list: [
           'Embase (Elsevier) - Indexed and tracked',
           'Crossref - Digital Object Identifiers (DOIs) minted for all publications',
@@ -170,7 +170,7 @@ export const POLICIES_DATA: Record<string, JournalPolicyContent> = {
     sections: [
       {
         heading: 'Plagiarism Screening',
-        content: 'Plagiarism of any kind is strictly forbidden in S3 Technologies journals. All submitted manuscripts are screened using standard plagiarism detection software (Turnitin / iThenticate) during initial editorial triage.',
+        content: 'Plagiarism of any kind is strictly forbidden in S3 Publication journals. All submitted manuscripts are screened using standard plagiarism detection software (Turnitin / iThenticate) during initial editorial triage.',
       },
       {
         heading: 'Permissible Similarity Index',

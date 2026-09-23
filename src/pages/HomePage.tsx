@@ -22,7 +22,7 @@ export const HomePage: React.FC = () => {
         {/* About Publisher */}
         <SectionTitle>About Publisher</SectionTitle>
         <p className="text-gray-700 text-[13px] sm:text-sm leading-relaxed mb-6 text-justify">
-          S3 Technologies is an autonomous open access academic publisher of arts, science,
+          S3 Publication is an autonomous open access academic publisher of arts, science,
           engineering and healthcare journals, proceeding and books.
         </p>
 
@@ -89,7 +89,7 @@ export const HomePage: React.FC = () => {
           the distributer and the society of society-owned or supported journals.
         </p>
         <p className="text-gray-700 text-[13px] sm:text-sm leading-relaxed text-justify">
-          S3 Technologies gives an assurance to the scientific research community to impose peer review
+          S3 Publication gives an assurance to the scientific research community to impose peer review
           and to follow the moral ethics and integrity to ensure high quality research work in the field
           of scholarly publication.
         </p>

@@ -27,14 +27,14 @@ export const ModernFooter: React.FC = () => {
               <div className="flex items-center gap-3 mb-3">
                 <img
                   src="/images/jpubv5.png"
-                  alt="S3 Technologies Logo"
+                  alt="S3 Publication Logo"
                   className="h-10 w-auto object-contain"
                 />
                 <span
                   className="text-base font-extrabold tracking-tight text-white"
                   style={{ fontFamily: theme.fontFamilyHeading }}
                 >
-                  S3 Technologies
+                  S3 Publication
                 </span>
               </div>
               <p className="text-xs leading-relaxed text-slate-400 max-w-md">
@@ -100,7 +100,7 @@ export const ModernFooter: React.FC = () => {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-xs text-slate-500 text-center">
           <p>
-            Copyright 2026 S3 Technologies, India. Licensed under{' '}
+            Copyright 2026 S3 Publication, India. Licensed under{' '}
             <a
               href="https://creativecommons.org/licenses/by/4.0/"
               target="_blank"

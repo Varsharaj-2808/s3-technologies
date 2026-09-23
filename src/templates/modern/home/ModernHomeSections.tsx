@@ -7,6 +7,7 @@ import { JOURNALS_DATA } from '../../../data/journalsData';
 import { ARTICLES_DATA } from '../../../data/articlesData';
 import { BOOKS_DATA } from '../../../data/booksData';
 import { scrollToSection, takePendingSection } from './scrollUtils';
+import collaborationIllustration from '../../../assets/research-collaboration.png';
 import {
   ArrowRight,
   BookOpen,
@@ -47,14 +48,17 @@ const SectionHeading: React.FC<{
   );
 };
 
-const Stat: React.FC<{ value: string; label: string }> = ({ value, label }) => {
-  const { theme } = useTheme();
+const AcademicCollaborationHeroVisual: React.FC = () => {
   return (
-    <div className="rounded-xl bg-white/5 ring-1 ring-white/10 px-4 py-4 text-center">
-      <div className="text-2xl sm:text-3xl font-extrabold text-white" style={{ fontFamily: theme.fontFamilyHeading }}>
-        {value}
+    <div className="relative w-full max-w-[540px] sm:max-w-[580px] lg:max-w-[620px] mx-auto select-none">
+      <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl shadow-slate-950/60 ring-1 ring-white/10 aspect-[4/3] bg-gradient-to-b from-slate-800/90 to-slate-900/90 flex items-center justify-center">
+        <img
+          src={collaborationIllustration}
+          alt="Indian academic researchers and scholars collaborating on scientific publishing"
+          referrerPolicy="no-referrer"
+          className="w-full h-full object-cover block"
+        />
       </div>
-      <div className="text-[11px] sm:text-xs text-slate-400 mt-1 leading-tight">{label}</div>
     </div>
   );
 };
@@ -73,45 +77,46 @@ const HeroSection: React.FC = () => {
           backgroundSize: '26px 26px',
         }}
       />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
-        <div className="max-w-3xl">
-          <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-200 bg-blue-500/10 border border-blue-400/30 rounded-full px-3 py-1.5 mb-6">
-            <Layers className="w-3.5 h-3.5" />
-            Open Access &middot; Peer Reviewed
-          </p>
-          <h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]"
-            style={{ fontFamily: theme.fontFamilyHeading }}
-          >
-            Advancing research through open access publishing
-          </h1>
-          <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-            S3 Technologies is an autonomous open access academic publisher of arts, science,
-            engineering and healthcare journals, proceedings and books.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <button
-              onClick={() => scrollToSection('journals')}
-              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold shadow-lg shadow-blue-900/40 transition-colors"
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 xl:gap-14 items-center">
+          {/* Hero text and CTA on one side (Desktop left: ~55-58%) */}
+          <div className="lg:col-span-7 xl:col-span-6">
+            <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-200 bg-blue-500/10 border border-blue-400/30 rounded-full px-3 py-1.5 mb-6">
+              <Layers className="w-3.5 h-3.5" />
+              Open Access &middot; Peer Reviewed
+            </p>
+            <h1
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]"
+              style={{ fontFamily: theme.fontFamilyHeading }}
             >
-              <BookOpen className="w-4 h-4" />
-              Explore journals
-            </button>
-            <button
-              onClick={() => scrollToSection('submission')}
-              className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 ring-1 ring-white/25 text-white px-6 py-3 text-sm font-bold transition-colors"
-            >
-              <FileText className="w-4 h-4" />
-              Submit research
-            </button>
+              Advancing research through open access publishing
+            </h1>
+            <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+              S3 Publication is an autonomous open access academic publisher of arts, science,
+              engineering and healthcare journals, proceedings and books.
+            </p>
+            <div className="mt-8 sm:mt-9 flex flex-wrap items-center gap-3">
+              <button
+                onClick={() => scrollToSection('journals')}
+                className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold shadow-lg shadow-blue-900/40 transition-colors cursor-pointer"
+              >
+                <BookOpen className="w-4 h-4" />
+                Explore journals
+              </button>
+              <button
+                onClick={() => scrollToSection('submission')}
+                className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 ring-1 ring-white/25 text-white px-6 py-3 text-sm font-bold transition-colors cursor-pointer"
+              >
+                <FileText className="w-4 h-4" />
+                Submit research
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl">
-          <Stat value={`${JOURNALS_DATA.length}`} label="Peer-reviewed journals" />
-          <Stat value={`${ARTICLES_DATA.length}`} label="Latest articles" />
-          <Stat value={`${BOOKS_DATA.length}`} label="Books & proceedings" />
-          <Stat value="100%" label="Open access" />
+          {/* People collaboration visual on the right (approx 42-50% width, vertically centered, responsive on mobile) */}
+          <div className="lg:col-span-5 xl:col-span-6 flex justify-center items-center py-4 lg:py-0">
+            <AcademicCollaborationHeroVisual />
+          </div>
         </div>
       </div>
     </section>
@@ -158,7 +163,7 @@ const AboutSection: React.FC = () => {
                 the world to supply definitive scope and references in focused and specialist fields.
               </p>
               <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed text-justify mt-3">
-                S3 Technologies gives an assurance to the scientific research community to impose peer
+                S3 Publication gives an assurance to the scientific research community to impose peer
                 review and to follow the moral ethics and integrity to ensure high quality research work
                 in the field of scholarly publication.
               </p>
@@ -201,15 +206,14 @@ const JournalsSection: React.FC = () => {
               to={`/journals/${j.id}`}
               className="group flex flex-col bg-white rounded-2xl ring-1 ring-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all overflow-hidden"
             >
-              <div className="h-44 bg-slate-100 flex items-center justify-center p-6 border-b border-slate-100">
+              <div className="h-48 sm:h-52 w-full overflow-hidden bg-slate-900 relative">
                 <img
                   src={j.coverImage}
                   alt={j.title}
-                  className="max-h-full max-w-full object-contain drop-shadow-sm"
-                  onError={(e) => {
-                    e.currentTarget.src = '/images/jpubv5.png';
-                  }}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
               </div>
               <div className="p-5 flex flex-col flex-1">
                 <h3 className="text-base font-extrabold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">

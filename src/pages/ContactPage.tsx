@@ -305,7 +305,7 @@ export const ContactPage: React.FC = () => {
             Thank you, {formData.name || 'Valued Visitor'}!
           </h3>
           <p className="text-xs sm:text-[13px] text-gray-600 mb-6 leading-relaxed">
-            Your message regarding <strong className="text-gray-800">"{formData.subject || 'General Inquiry'}"</strong> has been successfully submitted to S3 Technologies's Management Desk.
+            Your message regarding <strong className="text-gray-800">"{formData.subject || 'General Inquiry'}"</strong> has been successfully submitted to S3 Publication's Management Desk.
           </p>
           <div className="bg-gray-50 border border-gray-200 rounded p-4 text-xs text-gray-600 text-left mb-6 space-y-1">
             <p><strong>Mobile:</strong> {formData.mobile}</p>

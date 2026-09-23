@@ -9,7 +9,7 @@ export const AppFooter: React.FC = () => {
     <footer
       className="text-white transition-colors mt-auto"
       style={{
-        backgroundColor: themeId === 'modern' ? '#0f172a' : themeId === 'heritage' ? '#2d0a0a' : '#1f1f1f',
+        backgroundColor: '#0f172a',
         fontFamily: theme.fontFamilyBody,
       }}
     >
@@ -25,7 +25,7 @@ export const AppFooter: React.FC = () => {
             </h3>
             <div className="w-10 h-0.5 bg-white/40 mb-4" />
             <address className="not-italic text-gray-300 text-xs sm:text-[13px] leading-relaxed">
-              <strong className="text-white block mb-1">S3 Technologies</strong>
+              <strong className="text-white block mb-1">S3 Publication</strong>
               No. 322/A/1, Ganga Vihar Colony, Transport Nagar, Prayagraj, 211001, Uttar Pradesh, India.
             </address>
           </div>
