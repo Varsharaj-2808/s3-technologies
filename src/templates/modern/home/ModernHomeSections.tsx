@@ -101,14 +101,14 @@ const HeroSection: React.FC = () => {
                 className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold shadow-lg shadow-blue-900/40 transition-colors cursor-pointer"
               >
                 <BookOpen className="w-4 h-4" />
-                Explore journals
+                Explore Journals
               </button>
               <button
                 onClick={() => scrollToSection('submission')}
                 className="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-white/20 ring-1 ring-white/25 text-white px-6 py-3 text-sm font-bold transition-colors cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
-                Submit research
+                Submit Research
               </button>
             </div>
           </div>
@@ -142,7 +142,7 @@ const AboutSection: React.FC = () => {
         <div className="grid gap-8 lg:grid-cols-12 mt-10 items-start">
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-white rounded-2xl p-6 sm:p-8 ring-1 ring-slate-200 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-3">Publishing ethics</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">Publishing Ethics</h3>
               <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed text-justify mb-4">
                 The publication of an editorial in a peer-reviewed journal is a basic building square
                 within the advancement of a coherent and regarded organize of information. It could be a
@@ -156,7 +156,7 @@ const AboutSection: React.FC = () => {
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 sm:p-8 ring-1 ring-slate-200 shadow-sm">
-              <h3 className="text-lg font-bold text-slate-900 mb-3">For authors</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">For Authors</h3>
               <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed text-justify">
                 Our logic is to map modern wildernesses in developing and creating innovation ranges in
                 research, industry and administration, and to connect with centres of brilliance around
@@ -172,7 +172,7 @@ const AboutSection: React.FC = () => {
 
           <div className="lg:col-span-5">
             <div className="bg-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl">
-              <h3 className="text-lg font-bold text-white mb-4">Our mission</h3>
+              <h3 className="text-lg font-bold text-white mb-4">Our Mission</h3>
               <ul className="space-y-4">
                 {mission.map((m, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -196,7 +196,7 @@ const JournalsSection: React.FC = () => {
         <SectionHeading
           align="center"
           eyebrow="Our Journals"
-          title="Peer-reviewed journals"
+          title="Peer-Reviewed Journals"
           description="A growing portfolio of journals spanning advances in computation, energy, health sciences and beyond."
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -239,7 +239,7 @@ const JournalsSection: React.FC = () => {
             to="/journals"
             className="inline-flex items-center gap-2 rounded-xl bg-white ring-1 ring-slate-300 hover:ring-blue-500 text-slate-700 hover:text-blue-600 px-6 py-3 text-sm font-bold transition-colors"
           >
-            All journals
+            All Journals
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -256,7 +256,7 @@ const ArticlesSection: React.FC = () => {
         <SectionHeading
           align="center"
           eyebrow="Latest Research"
-          title="Latest articles"
+          title="Latest Articles"
           description="Recent peer-reviewed research published across our journals."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
@@ -307,7 +307,7 @@ const BooksSection: React.FC = () => {
         <SectionHeading
           align="center"
           eyebrow="Publications"
-          title="Books & proceedings"
+          title="Books & Proceedings"
           description="Scholarly monographs, editions and chapter collections from our editorial program."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
@@ -384,7 +384,7 @@ const SubmissionSection: React.FC = () => {
           align="center"
           light
           eyebrow="For Authors"
-          title="Publish with us"
+          title="Publish With Us"
           description="Two clear pathways to bring your research to a global open access audience."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -392,7 +392,7 @@ const SubmissionSection: React.FC = () => {
             <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-5">
               <FileText className="w-6 h-6 text-blue-300" />
             </div>
-            <h3 className="text-xl font-extrabold text-white mb-3">Submit an article</h3>
+            <h3 className="text-xl font-extrabold text-white mb-3">Submit an Article</h3>
             <ul className="space-y-3 mb-6">
               {articlePoints.map((p, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -405,7 +405,7 @@ const SubmissionSection: React.FC = () => {
               to="/submit-articles"
               className="inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold transition-colors"
             >
-              Submit manuscript <ArrowRight className="w-4 h-4" />
+              Submit Manuscript <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
@@ -413,7 +413,7 @@ const SubmissionSection: React.FC = () => {
             <div className="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center mb-5">
               <BookOpen className="w-6 h-6 text-emerald-300" />
             </div>
-            <h3 className="text-xl font-extrabold text-white mb-3">Publish a book / chapter</h3>
+            <h3 className="text-xl font-extrabold text-white mb-3">Publish a Book / Chapter</h3>
             <ul className="space-y-3 mb-6">
               {bookPoints.map((p, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -426,7 +426,7 @@ const SubmissionSection: React.FC = () => {
               to="/book-submission"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 text-sm font-bold transition-colors"
             >
-              Book submission <ArrowRight className="w-4 h-4" />
+              Book Submission <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -469,7 +469,7 @@ const JoinSection: React.FC = () => {
               to="/join-as-editor"
               className="mt-7 inline-flex items-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold transition-colors"
             >
-              Apply now <ArrowRight className="w-4 h-4" />
+              Apply Now <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
           <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm ring-1 ring-slate-200">
@@ -504,12 +504,12 @@ const ContactSection: React.FC = () => {
         <SectionHeading
           align="center"
           eyebrow="Contact"
-          title="Get in touch"
+          title="Get in Touch"
           description="Questions on submissions, peer review, journals or publications - we are happy to help."
         />
         <div className="grid gap-8 lg:grid-cols-2 mt-12">
           <div className="bg-white rounded-2xl p-6 sm:p-8 ring-1 ring-slate-200 shadow-sm">
-            <h3 className="text-lg font-bold text-slate-900 mb-4">Editorial office</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Editorial Office</h3>
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
@@ -533,14 +533,14 @@ const ContactSection: React.FC = () => {
               <div className="flex items-start gap-3">
                 <Send className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-slate-800">Quick channels</p>
+                  <p className="font-semibold text-slate-800">Quick Channels</p>
                   <div className="flex flex-wrap gap-2 mt-1">
                     <Link to="/review-request" className="text-blue-600 hover:text-blue-500 font-medium">
-                      Review request
+                      Review Request
                     </Link>
                     <span className="text-slate-300">|</span>
                     <Link to="/reviewer-report-form" className="text-blue-600 hover:text-blue-500 font-medium">
-                      Reviewer report
+                      Reviewer Report
                     </Link>
                   </div>
                 </div>
@@ -549,7 +549,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-2xl p-6 sm:p-8 ring-1 ring-slate-200 shadow-sm flex flex-col">
-            <h3 className="text-lg font-bold text-slate-900 mb-3">Send a message</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-3">Send a Message</h3>
             <p className="text-sm text-slate-600 leading-relaxed mb-6">
               Use our contact form for queries on manuscript status, journal coordination, book
               proposals or general enquiries. You will receive a reply from our editorial team.
@@ -558,7 +558,7 @@ const ContactSection: React.FC = () => {
               to="/contact"
               className="mt-auto inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 text-sm font-bold transition-colors"
             >
-              Open contact form <ArrowRight className="w-4 h-4" />
+              Open Contact Form <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
