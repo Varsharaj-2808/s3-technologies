@@ -20,8 +20,8 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onToggleMobileMenu }) => {
             <span className="hidden md:inline text-gray-300">|</span>
             <span className="flex items-center gap-1">
               <Mail className="w-3.5 h-3.5 text-gray-500" />
-              <a href="mailto:jpub.editor@jpub.org" className="hover:underline text-gray-700">
-                jpub.editor@jpub.org
+              <a href="mailto:info@s3przresearch.com" className="hover:underline text-gray-700">
+                info@s3przresearch.com
               </a>
             </span>
           </div>
@@ -37,7 +37,7 @@ export const AppHeader: React.FC<AppHeaderProps> = ({ onToggleMobileMenu }) => {
           <div className="flex items-center gap-4 sm:gap-6">
             <Link to="/" className="shrink-0 group">
               <img
-                src="/images/jpubv5.png"
+                src="/images/S3pub_logo.png"
                 alt="S3 Publication Logo"
                 className="h-14 sm:h-20 w-auto object-contain drop-shadow-xs"
               />

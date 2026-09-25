@@ -516,10 +516,10 @@ const ContactSection: React.FC = () => {
                 <div>
                   <p className="font-semibold text-slate-800">Email</p>
                   <a
-                    href="mailto:jpub.editor@jpub.org"
+                    href="mailto:info@s3przresearch.com"
                     className="text-slate-600 hover:text-blue-600 transition-colors"
                   >
-                    jpub.editor@jpub.org
+                    info@s3przresearch.com
                   </a>
                 </div>
               </div>
@@ -527,7 +527,9 @@ const ContactSection: React.FC = () => {
                 <Globe className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-slate-800">Office</p>
-                  <p className="text-slate-600">Prayagraj, Uttar Pradesh, India</p>
+                  <p className="text-slate-600">109, Vakkil New Street,
+                    Opposite of Bus Stop,
+                    Simmakkal, Madurai</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

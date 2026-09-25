@@ -4,14 +4,32 @@ import { useTheme } from '../context/ThemeContext';
 import { Layout } from '../components/layout/Layout';
 import { ContentCard } from '../templates/shared/ContentCard';
 import { SectionTitle } from '../templates/shared/SectionTitle';
-import { getBookBySlug, BOOKS_DATA } from '../data/booksData';
+import { getBookBySlug } from '../data/booksData';
 
 export const BookDetailPage: React.FC = () => {
   const { params } = useRouter();
   const { theme } = useTheme();
 
   const slug = params.bookSlug || 'update-marburg-virus';
-  const book = getBookBySlug(slug) || BOOKS_DATA[0];
+  const book = getBookBySlug(slug);
+
+  if (!book) {
+    return (
+      <Layout>
+        <ContentCard>
+          <div className="p-8 text-center text-gray-500 text-xs bg-gray-50 border border-gray-200">
+            <p className="font-semibold text-sm mb-2">Book not found</p>
+            <p className="mb-4">
+              The book you are looking for does not exist or is not available.
+            </p>
+            <Link to="/books" className="font-bold text-blue-600 underline">
+              Browse all books
+            </Link>
+          </div>
+        </ContentCard>
+      </Layout>
+    );
+  }
 
   return (
     <Layout

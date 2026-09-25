@@ -41,6 +41,13 @@ export interface Journal {
   establishedYear: number;
   apcUsd: number;
   frequency: string;
+  language: string;
+  reviewProcess: string;
+  format: string;
+  subject: string;
+  queryEmail: string;
+  publisherName: string;
+  publisherAddress: string;
   license: string;
   editorialHouseRegister?: string;
   editorialHouseLogin?: string;
@@ -73,11 +80,12 @@ export interface Article {
 export interface EditorialMember {
   id: string;
   journalId: number;
-  role: 'editor-in-chief' | 'associate-editor' | 'editor';
+  role: 'editor-in-chief' | 'associate-editor' | 'editor' | 'editorial-office';
   title: string;
   name: string;
   affiliation: string;
   email: string;
+  researchInterests?: string;
   profiles: {
     scopus?: string;
     orcid?: string;

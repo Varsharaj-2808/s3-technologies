@@ -1,10 +1,10 @@
 import React from 'react';
-import { useRouter } from '../context/RouterContext';
+import { useRouter, Link } from '../context/RouterContext';
 import { useTheme } from '../context/ThemeContext';
 import { Layout } from '../components/layout/Layout';
 import { ContentCard } from '../templates/shared/ContentCard';
 import { SectionTitle } from '../templates/shared/SectionTitle';
-import { getArticleById, ARTICLES_DATA } from '../data/articlesData';
+import { getArticleById } from '../data/articlesData';
 import { getJournalById } from '../data/journalsData';
 import { JournalNavMenu } from '../components/journal/JournalNavMenu';
 
@@ -13,7 +13,26 @@ export const ArticleDetailPage: React.FC = () => {
   const { theme } = useTheme();
 
   const articleId = params.articleId ? parseInt(params.articleId, 10) : 394;
-  const article = getArticleById(articleId) || ARTICLES_DATA[0];
+  const article = getArticleById(articleId);
+
+  if (!article) {
+    return (
+      <Layout>
+        <ContentCard>
+          <div className="p-8 text-center text-gray-500 text-xs bg-gray-50 border border-gray-200">
+            <p className="font-semibold text-sm mb-2">Article not found</p>
+            <p className="mb-4">
+              The article you are looking for does not exist or is not available.
+            </p>
+            <Link to="/journals" className="font-bold text-blue-600 underline">
+              Browse all journals
+            </Link>
+          </div>
+        </ContentCard>
+      </Layout>
+    );
+  }
+
   const journal = getJournalById(article.journalId);
 
   return (

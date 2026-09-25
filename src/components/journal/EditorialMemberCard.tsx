@@ -18,6 +18,9 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
       case 'associate-editor':
         return 'Associate Editor';
       case 'editor':
+        return 'Editorial Board Member';
+      case 'editorial-office':
+        return 'Editorial Office';
       default:
         return 'Editorial Board Member';
     }
@@ -40,7 +43,8 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-1 flex-wrap">
           <h3 className="text-base font-bold text-gray-900" style={{ fontFamily: theme.fontFamilyHeading }}>
-            {member.title} {member.name}
+            {member.title && `${member.title} `}
+            {member.name}
           </h3>
           <Badge variant={member.role === 'editor-in-chief' ? 'primary' : 'neutral'}>
             {getRoleLabel()}
@@ -50,6 +54,12 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
         <p className="text-xs text-gray-600 leading-relaxed mb-3">
           {member.affiliation}
         </p>
+
+        {member.researchInterests && (
+          <p className="text-xs text-gray-700 leading-relaxed mb-3">
+            <span className="font-semibold">Research Interest:</span> {member.researchInterests}
+          </p>
+        )}
 
         <div className="flex items-center gap-3 text-xs flex-wrap">
           {member.email && (
@@ -94,6 +104,18 @@ export const EditorialMemberCard: React.FC<EditorialMemberCardProps> = ({ member
               className="flex items-center gap-1 text-amber-700 hover:underline"
             >
               <span>Google Scholar</span>
+              <ExternalLink className="w-2.5 h-2.5" />
+            </a>
+          )}
+
+          {member.profiles.institutional && (
+            <a
+              href={member.profiles.institutional}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-indigo-700 hover:underline"
+            >
+              <span>Website</span>
               <ExternalLink className="w-2.5 h-2.5" />
             </a>
           )}

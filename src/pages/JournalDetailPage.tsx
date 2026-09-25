@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useRouter } from '../context/RouterContext';
+import { useRouter, Link } from '../context/RouterContext';
 import { useTheme } from '../context/ThemeContext';
 import { Layout } from '../components/layout/Layout';
 import { ContentCard } from '../templates/shared/ContentCard';
 import { SectionTitle } from '../templates/shared/SectionTitle';
-import { getJournalById, JOURNALS_DATA } from '../data/journalsData';
-import { getArticlesByJournalId, ARTICLES_DATA } from '../data/articlesData';
+import { getJournalById } from '../data/journalsData';
+import { getArticlesByJournalId } from '../data/articlesData';
 import { JournalMasthead } from '../components/journal/JournalMasthead';
 import { JournalNavMenu } from '../components/journal/JournalNavMenu';
 import { ArticleListItem } from '../components/journal/ArticleListItem';
@@ -18,13 +18,30 @@ export const JournalDetailPage: React.FC = () => {
   const articlesPerPage = 4;
 
   const journalId = params.journalId ? parseInt(params.journalId, 10) : 43;
-  const journal = getJournalById(journalId) || JOURNALS_DATA[0];
+  const journal = getJournalById(journalId);
+
+  if (!journal) {
+    return (
+      <Layout>
+        <ContentCard>
+          <div className="p-8 text-center text-gray-500 text-xs bg-gray-50 border border-gray-200">
+            <p className="font-semibold text-sm mb-2">Journal not found</p>
+            <p className="mb-4">
+              The journal you are looking for does not exist or has not been published yet.
+            </p>
+            <Link to="/journals" className="font-bold text-blue-600 underline">
+              Browse all journals
+            </Link>
+          </div>
+        </ContentCard>
+      </Layout>
+    );
+  }
 
   const journalArticles = getArticlesByJournalId(journal.id);
-  const displayArticles = journalArticles.length > 0 ? journalArticles : ARTICLES_DATA.slice(0, 3);
 
-  const totalPages = Math.max(1, Math.ceil(displayArticles.length / articlesPerPage));
-  const paginatedArticles = displayArticles.slice(
+  const totalPages = Math.max(1, Math.ceil(journalArticles.length / articlesPerPage));
+  const paginatedArticles = journalArticles.slice(
     (currentPage - 1) * articlesPerPage,
     currentPage * articlesPerPage
   );
@@ -68,7 +85,7 @@ export const JournalDetailPage: React.FC = () => {
         {/* About Journal */}
         <SectionTitle size="md">About Journal</SectionTitle>
         <p className="text-gray-700 text-xs sm:text-[13px] leading-relaxed mb-6 text-justify">
-          {journal.description}
+          {journal.description || journal.aimsAndScopeSummary || journal.shortDescription}
         </p>
 
         {/* Announcements */}
@@ -80,11 +97,17 @@ export const JournalDetailPage: React.FC = () => {
         {/* Articles in this Journal */}
         <SectionTitle size="md">Articles in this Journal</SectionTitle>
 
-        <div className="divide-y divide-gray-200">
-          {paginatedArticles.map((article) => (
-            <ArticleListItem key={article.id} article={article} />
-          ))}
-        </div>
+        {journalArticles.length === 0 ? (
+          <div className="p-8 text-center text-gray-500 text-xs bg-gray-50 border border-gray-200">
+            No articles have been published in this journal yet.
+          </div>
+        ) : (
+          <div className="divide-y divide-gray-200">
+            {paginatedArticles.map((article) => (
+              <ArticleListItem key={article.id} article={article} />
+            ))}
+          </div>
+        )}
 
         {totalPages > 1 && (
           <div className="mt-6">

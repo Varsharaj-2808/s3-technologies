@@ -24,9 +24,9 @@ export const ModernDrawer: React.FC<ModernDrawerProps> = ({ isOpen, onClose }) =
       >
         <div className="p-4 flex items-center justify-between border-b border-slate-200">
           <div className="flex items-center gap-2">
-            <img src="/images/jpubv5.png" alt="S3 Publication Logo" className="h-8 w-auto object-contain" />
+            <img src="/images/S3pub_logo.png" alt="S3 Publication Logo" className="h-20 w-auto object-contain" />
             <span className="font-extrabold tracking-tight text-base text-slate-900" style={{ fontFamily: theme.fontFamilyHeading }}>
-              S3 Publication
+              
             </span>
           </div>
           <button onClick={onClose} className="p-1.5 hover:bg-slate-100 rounded-lg text-slate-500">
@@ -51,10 +51,12 @@ export const ModernDrawer: React.FC<ModernDrawerProps> = ({ isOpen, onClose }) =
 
         <div className="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-500">
           <p className="font-semibold text-slate-700 mb-1">Editorial Office:</p>
-          <p>Prayagraj, Uttar Pradesh, India</p>
-          <a href="mailto:jpub.editor@jpub.org" className="flex items-center gap-1 mt-2 text-blue-600 font-medium">
+          <p>109, Vakkil New Street,
+            Opposite of Bus Stop,
+            Simmakkal, Madurai</p>
+          <a href="mailto:info@s3przresearch.com" className="flex items-center gap-1 mt-2 text-blue-600 font-medium">
             <Mail className="w-3.5 h-3.5" />
-            jpub.editor@jpub.org
+            info@s3przresearch.com
           </a>
         </div>
       </div>

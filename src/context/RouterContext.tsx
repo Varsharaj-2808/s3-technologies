@@ -87,7 +87,7 @@ export function extractParams(currentPath: string): Record<string, string> {
   const params: Record<string, string> = {};
 
   // Pattern: /journals/:journalId/:subpage/volume/:volumeId/issue/:issueId
-  const issueMatch = currentPath.match(/^\/journals\/(\d+)\/volume\/(\d+)\/issue\/(\d+)/);
+  const issueMatch = currentPath.match(/^\/journals\/(\d+)\/volume\/(\d+)\/issue\/([\d-]+)/);
   if (issueMatch) {
     params.journalId = issueMatch[1];
     params.volumeId = issueMatch[2];

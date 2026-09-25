@@ -51,11 +51,11 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
             
           </p>
           <a
-            href=""
+            href="mailto:info@s3przresearch.com"
             className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
           >
             <Mail className="w-3.5 h-3.5" />
-            
+            info@s3przresearch.com
           </a>
         </div>
       </div>
@@ -65,9 +65,9 @@ export const ModernHeader: React.FC<ModernHeaderProps> = ({ onToggleMobileMenu }
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
-              src="/images/jpubv5.png"
+              src="/images/S3pub_logo.png"
               alt="S3 Publication Logo"
-              className="h-11 w-auto object-contain"
+              className="h-24 w-auto object-contain"
             />
             <span className="hidden sm:block">
               <span

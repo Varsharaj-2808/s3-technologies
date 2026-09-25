@@ -26,7 +26,7 @@ export const ModernFooter: React.FC = () => {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-3">
                 <img
-                  src="/images/jpubv5.png"
+                  src="/images/S3pub_logo.png"
                   alt="S3 Publication Logo"
                   className="h-10 w-auto object-contain"
                 />
